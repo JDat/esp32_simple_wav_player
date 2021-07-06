@@ -24,7 +24,7 @@ Even if there is no external circuit, you can get sound just by connecting the s
 
 1. Prepare a Wav file in PCM format with software such as Audacity. Since the information is obtained from the file header, it is not set to RAW (header-less).
 2. Convert the audio file to text with software such as HxD. Output the data in C language array format and make it include data.
-2.1 In linux you use xxd tool for converting: xxd - i inputfile.wav audiodata.h Then make minor sample array edit.
+3. In linux you use xxd tool for converting: xxd - i inputfile.wav audiodata.h Then make minor sample array edit.
 
 ## Installation
 

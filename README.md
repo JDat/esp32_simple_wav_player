@@ -1,33 +1,34 @@
 # esp32_simple_wav_player
-no I2S device required. Just connect ESP32 and speaker with two lines (GND/GPIO25).
+no I2S device required. Just connect ESP32 and speaker with two lines (GND / GPIO25).
 
 ## Description
 
-ESP32に定型文をしゃべらせるシンプルな Wev Playerで、時計や天気予報などを作るベースとして用意しました。
-外部回路がなくてもスピーカーを繋ぐだけで音声がでます。テスト用に複数のサンプリングレートの音声を聞き比べられるようにしました。
+It is a simple Wev Player that lets ESP32 speak fixed phrases, and is prepared as a base for making clocks and weather forecasts.
+Even if there is no external circuit, you can get sound just by connecting the speaker. Allowed you to hear and compare audio from multiple sampling rates for testing.
 
 ## Features
 
-- 複数サンプリングレートのサポート(4KHz, 8KHz, 16KHz, ...)
-- 8bit/16bitのデータサイズサポート
-- 複数データの連続再生
-- ...
+--Support for multiple sampling rates (4KHz, 8KHz, 16KHz, ...)
+--8bit / 16bit data size support
+--Continuous playback of multiple data
+――...
 
 ## Requirement
 
-- ESP32 x 1
-- Speaker x 1
-- (2KΩ 半固定抵抗、0.1μ コンデンサ)
+--ESP32 x 1
+--Speaker x 1
+-(2KΩ semi-fixed resistor, 0.1μ capacitor)
 
 
 ## Usage
 
-1. Audacity などのソフトで、PCM形式のWavファイルを用意します。ファイルヘッダから情報を取得するので、RAW(header-less)にはしません。
-2. HxD　などのソフトで、音声ファイルをテキストに変換します。C言語の配列形式でデータを出力し、includeデータにします。
+1. Prepare a Wav file in PCM format with software such as Audacity. Since the information is obtained from the file header, it is not set to RAW (header-less).
+2. Convert the audio file to text with software such as HxD. Output the data in C language array format and make it include data.
+2.1 In linux you use xxd tool for converting: xxd - i inputfile.wav audiodata.h Then make minor sample array edit.
 
 ## Installation
 
-Arduino IDE と Arduino core for the ESP32　でコンパイルし、ESP32に転送。
+Compile with Arduino IDE and Arduino core for the ESP32 and transfer to ESP32.
 
 ## Author
 
@@ -35,4 +36,4 @@ kghrlabo (http://kghr.blog.fc2.com/)
 
 ## License
 
-TBD
+TBD 
